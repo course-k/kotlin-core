@@ -28,7 +28,7 @@ L3（制御フロー: `if`・`when`・ループ・式としての制御）
 2. 手本 1〜6 を、この順に `Samples.kt` に打ち込む。
 
 出典から変えたところ（手本 1〜6 に共通）: 出典では各手本が `fun main()` で、テストから呼べないため、手本ごとの関数名（`ifStatement` など）に変えた。出典の `//sampleStart`・`//sampleEnd`（Web ページの表示範囲の印）は外した。
-3. `./gradlew :b03:test --tests 'b03.SamplesTest'` を実行し、`BUILD SUCCESSFUL` が出ることを確かめる。
+3. `./gradlew :b03:test --tests 'b03.SamplesTest'` を実行し、`BUILD SUCCESSFUL` が出ることを確かめる。続けて、手本 3 の `else` の枝（`else -> "Unknown"` の行）を消して同じコマンドを実行し、出たエラーを読む。読んだら元に戻す。
 4. `ANSWERS.md` の「書き写し」の問いに、自分の言葉で答える。
 
 **手本 1**（関数名 `ifStatement`）

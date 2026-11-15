@@ -95,7 +95,7 @@ tasks.test {
 
 - `plugins { }` は、このプロジェクトで使う Gradle プラグインを並べる。`alias(libs.plugins.kotlin.jvm)` は、Version Catalog の `[plugins]` の `kotlin-jvm` を指す（`-` は `.` で書く）。
 - `repositories { }` は、依存ライブラリをどこから取るかを決める。
-- `dependencies { }` の `testImplementation` は、テストのコンパイルと実行にだけ使う依存を宣言する。`kotlin("test")` は Kotlin の標準のテストライブラリ kotlin.test。
+- `dependencies { }` は、依存を使う段階ごとに宣言する。`implementation` は本体（`src/main`）のコンパイルと実行に使う依存、`testImplementation` はテスト（`src/test`）のコンパイルと実行にだけ使う依存。`kotlin("test")` は Kotlin の標準のテストライブラリ kotlin.test。
 - `kotlin { jvmToolchain(25) }` は、コンパイルと実行に使う JDK のバージョンを決める。
 - `application { mainClass.set("MainKt") }` は、`run` タスクで実行するクラスを決める。
 - `tasks.test { useJUnitPlatform() }` は、テストを JUnit Platform の上で走らせる。この設定があると、`kotlin("test")` は JUnit 5 用の kotlin-test-junit5 に解決される。
